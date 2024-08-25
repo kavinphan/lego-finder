@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Lego Finder</title>
+<section class="content">
+  <button onclick="history.back()">Back</button>
+  <p>Search results for {{ search }}</p>
+  {% for result in results %}
+    <a href="/set/{{ result['set_num'] }}">
+      <h1>{{ result['name'] }}</h1>
+      <img src="{{ result['set_img_url'] }}" style="width: 300px; aspect-ratio: auto" />
+    </a>
+{% endfor %}
+</section>
