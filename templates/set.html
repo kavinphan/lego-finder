@@ -4,4 +4,12 @@
   <button onclick="history.back()">Back</button>
   <h1>{{ set['name'] }}</h1>
   <img src="{{ set['set_img_url'] }}" style="width: 300px; aspect-ratio: auto" />
+
+  <h2>Amazon Scraping Data</h2>
+  <p>Price: {{ amazon_results['price'] }}</p>
+  <p>In-stck?: {{ 'Yes' if amazon_results['in_stock'] else 'No' }}</p>
+
+  <h2>Ebay Scraping Data</h2>
+  <p>Price: {{ ebay_results['price'] }}</p>
+  <p>In-stck?: {{ 'Yes' if ebay_results['in_stock'] else 'No' }}</p>
 </section>
